@@ -31,9 +31,11 @@
 
 .currentEpisode {
   text-align: center;
-
+  max-width: 100%;
   img {
     border-radius: 1.5rem;
+    max-width: inherit;
+    max-height: fit-content;
   }
 
   strong {

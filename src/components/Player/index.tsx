@@ -8,7 +8,6 @@ import { usePlayer } from '../../contexts/PlayerContext';
 
 import styles from './styles.module.scss';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
-import id from 'date-fns/esm/locale/id/index.js';
 
 export function Player () {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -79,7 +78,8 @@ export function Player () {
             width={592} 
             height={592} 
             src={episode.thumbnail} 
-            objectFit="cover" 
+            alt="Descrição do episódio" 
+            style={{ objectFit: 'cover' }} 
           />
           <strong>{episode.title}</strong>
           <span>{episode.members}</span>

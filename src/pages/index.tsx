@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
+import { ptBR } from 'date-fns/locale/pt-BR';
 
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
@@ -53,9 +53,7 @@ export default function Home( {latestEpisodes, allEpisodes}: HomeProps) {
                   />
 
                 <div className={styles.episodeDetails}>
-                  <Link href= {`/episodes/${episode.id}`}>
-                  <a>{episode.title}</a>
-                  </Link>
+                  <Link href= {`/episodes/${episode.id}`}>{episode.title}</Link>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
@@ -98,9 +96,7 @@ export default function Home( {latestEpisodes, allEpisodes}: HomeProps) {
                       />
                     </td>
                     <td>
-                    <Link href= {`/episodes/${episode.id}`}>
-                      <a>{episode.title}</a>
-                    </Link>
+                    <Link href= {`/episodes/${episode.id}`}>{episode.title}</Link>
                     </td>
                     <td>{episode.members}</td>
                     <td style={{ width: 100}}>{episode.publishedAt}</td>
